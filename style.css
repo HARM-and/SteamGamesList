@@ -3,10 +3,11 @@ html,body {
     padding:0;
 }
 
-#body_background{
+body{
     background-image: url("img/background.png");
     background-size: 100%;
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
