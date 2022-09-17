@@ -23,7 +23,7 @@ function gamesToTable(gamesList) {
 		
 		console.log(game)
 		try {
-			var row = "<tr><td><img src="+gameImg+"></td><td>"+timePlayed+"</td></tr>"
+			var row = "<tr class=\"game_cell\" ><td><img class=\"game_img\" src="+gameImg+"></td><td>"+game.name+"</td><td>"+timePlayed+"</td></tr>"
 		}
 		catch{
 			var row = "<tr><td>???</td><td></td></tr>"
