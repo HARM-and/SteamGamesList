@@ -5,6 +5,7 @@ html,body {
 
 #body_background{
     background-image: url("img/background.png");
+    background-size: 100%;
     width: 100vw;
     height: 100vh;
     position: fixed;
