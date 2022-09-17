@@ -1,4 +1,4 @@
-var url = "https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=F881D288B906B338F4BD5F0A2A149DD8&steamid=76561198278404154&include_appinfo=1&include_played_free_games=1&format=json"
+var url = "https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=F881D288B906B338F4BD5F0A2A149DD8&steamid=76561198276987292&include_appinfo=1&include_played_free_games=1&format=json"
 var request = new XMLHttpRequest()
 request.responseType = 'json'
 request.open("GET", url, true)
