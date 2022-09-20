@@ -20,8 +20,6 @@ function gamesToTable(gamesList) {
 		else {
 			var timePlayed = Math.round(game.playtime_forever/60)+" Heures"
 		}
-		
-		console.log(game)
 		try {
 			var row = "<tr class=\"game_cell\" ><td><img class=\"game_img\" src="+gameImg+"></td><td>"+game.name+"</td><td>"+timePlayed+"</td></tr>"
 		}
