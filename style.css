@@ -1,4 +1,4 @@
-html,body {
+html,body{
     margin:0;
     padding:0;
     color: rgb(150, 150, 150);
@@ -21,6 +21,7 @@ body{
     width: 100%;
     margin-left: 5vw;
     margin-right: 5vw;
+    text-align: center;
 }
 
 .game_cell td{
@@ -30,6 +31,20 @@ body{
 .game_img{
     height: 10vh;
     width: auto;
+}
+
+.dispoPCyes{
+    background-color: rgb(153, 255, 153);
+}
+
+.dispoPCno{
+    background-color: rgb(250, 86, 86);
+}
+
+.pc_img{
+    height: auto;
+    width: 3vw;
+    border: solid, 1px;
 }
 
 #content{
