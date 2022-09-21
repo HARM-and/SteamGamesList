@@ -38,16 +38,18 @@ function isDispo(current,pc){
 	}
 }
 
-function setPC() {
+function setPC(length, pcHS) {
 	$('td.pc').each(function(index){
 
 		for (let i = 1; i < 11; i++){
-			$(this).append('<img class="pc_img '+isDispo($(this),i)+'" nb='+i+' src="img/computer-icon.png"></img>')
+			if(pcHS.includes(i.toString())){
+				$(this).append('<img class="pc_img dispoPChs" nb='+i+' src="img/computer-icon.png"></img>')
+			}
+			else{
+				$(this).append('<img class="pc_img '+isDispo($(this),i)+'" nb='+i+' src="img/computer-icon.png"></img>')
+			}
 		}
-	
-
 	})
-
 }
 
 function getGameImg(game) {
@@ -58,7 +60,7 @@ function gamesToTable(gamesList,pc) {
 	for (i = 0; i < gamesList.length; i++) {
 		var game = gamesList[i]
 		var gameImg = getGameImg(game)
-
+  
 		if (Math.round(game.playtime_forever/60) == 0) {
 			var timePlayed = game.playtime_forever+" Minutes"
 		}
@@ -81,7 +83,7 @@ function gamesToTable(gamesList,pc) {
 		$("tbody").append(row)
 	}
 }
-
+var pcHS = new Array('8');
 SteamId.forEach(data => {
 
 var url = "https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=C399FAF793D60A94D37BB9DF12877528&steamid="+data[1]+"&include_appinfo=1&include_played_free_games=1&format=json"
@@ -92,12 +94,18 @@ request.send()
 
 request.onload = function() {
     var JSONResponse = request.response.response.games
-    gamesToTable(JSONResponse, data[0])
+	if (typeof JSONResponse !== 'undefined'){
+		gamesToTable(JSONResponse, data[0])
+	}
+    else{
+		pcHS.push(data[0])
+	}
+	
 }
 });
 setTimeout(() => {  sortByName(); }, 3000);
 setTimeout(() => {  removeDuplicate(); }, 3500);
-setTimeout(() => {  setPC(); }, 4500);
+setTimeout(() => {  setPC(pcHS); }, 4500);
 
 
 
