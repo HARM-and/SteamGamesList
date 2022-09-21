@@ -45,6 +45,10 @@ a{
     background-color: rgb(250, 86, 86);
 }
 
+.dispoPChs{
+    background-color: rgb(107, 107, 107);
+}
+
 .pc_img{
     height: auto;
     width: 3vw;
