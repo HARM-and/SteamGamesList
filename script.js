@@ -38,7 +38,7 @@ function isDispo(current,pc){
 	}
 }
 
-function setPC(length, pcHS) {
+function setPC(pcHS) {
 	$('td.pc').each(function(index){
 
 		for (let i = 1; i < 11; i++){
