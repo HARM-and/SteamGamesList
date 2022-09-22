@@ -83,7 +83,7 @@ function gamesToTable(gamesList,pc) {
 		$("tbody").append(row)
 	}
 }
-var pcHS = new Array('8');
+var pcHS = new Array();
 SteamId.forEach(data => {
 
 var url = "https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=C399FAF793D60A94D37BB9DF12877528&steamid="+data[1]+"&include_appinfo=1&include_played_free_games=1&format=json"
