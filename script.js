@@ -76,7 +76,7 @@ function gamesToTable(gamesList,pc) {
 		}
 		else {
 			try {
-				var row = "<tr class=\"game_cell\" id=\""+game.appid+"\"><td><img class=\"game_img\" src="+gameImg+"></td><td class=\"game_name\"><a href=\"https://store.steampowered.com/app/"+game.appid+"\" target=\"_blank\" rel=\"noopener noreferrer\">"+game.name+"</a></td><td>"+GameCount+"</td><td class=\"pc\" pcnb="+pc+"></td></tr>"
+				var row = "<tr class=\"game_cell\" id=\""+game.appid+"\"><td><img class=\"game_img\" src="+gameImg+"></td><td class=\"game_name\"><a href=\"https://store.steampowered.com/app/"+game.appid+"\" target=\"_blank\" rel=\"noopener noreferrer\">"+game.name+"</a></td><td>coucou</td><td class=\"pc\" pcnb="+pc+"></td></tr>"
 			}
 			catch{
 				var row = "<tr><td>???</td><td></td></tr>"
@@ -109,6 +109,7 @@ request.onload = function() {
 setTimeout(() => {  sortByName(); }, 3000);
 setTimeout(() => {  removeDuplicate(); }, 3500);
 setTimeout(() => {  setPC(pcHS); }, 4500);
+console.log(GameCount);
 
 
 
