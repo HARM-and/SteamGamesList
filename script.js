@@ -11,6 +11,8 @@ const SteamId = [
 [pc = '10', id = '76561198276954280']
 ]
 
+var GameCount = 0
+
 function sortByName() {
 	$('tbody > tr').sort(function(a, b) {
 	return $('td.game_name', a).text().localeCompare($('td.game_name', b).text());
@@ -58,6 +60,7 @@ function getGameImg(game) {
 
 function gamesToTable(gamesList,pc) {
 	for (i = 0; i < gamesList.length; i++) {
+		GameCount++1
 		var game = gamesList[i]
 		var gameImg = getGameImg(game)
   
@@ -73,7 +76,7 @@ function gamesToTable(gamesList,pc) {
 		}
 		else {
 			try {
-				var row = "<tr class=\"game_cell\" id=\""+game.appid+"\"><td><img class=\"game_img\" src="+gameImg+"></td><td class=\"game_name\"><a href=\"https://store.steampowered.com/app/"+game.appid+"\" target=\"_blank\" rel=\"noopener noreferrer\">"+game.name+"</a></td><td>"+timePlayed+"</td><td class=\"pc\" pcnb="+pc+"></td></tr>"
+				var row = "<tr class=\"game_cell\" id=\""+game.appid+"\"><td><img class=\"game_img\" src="+gameImg+"></td><td class=\"game_name\"><a href=\"https://store.steampowered.com/app/"+game.appid+"\" target=\"_blank\" rel=\"noopener noreferrer\">"+game.name+"</a></td><td>"+GameCount+"</td><td class=\"pc\" pcnb="+pc+"></td></tr>"
 			}
 			catch{
 				var row = "<tr><td>???</td><td></td></tr>"
