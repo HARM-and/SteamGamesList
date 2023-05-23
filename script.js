@@ -41,6 +41,7 @@ function isDispo(current,pc){
 }
 
 function setPC(pcHS) {
+	console.log(GameCount);
 	$('td.pc').each(function(index){
 
 		for (let i = 1; i < 11; i++){
@@ -109,7 +110,6 @@ request.onload = function() {
 setTimeout(() => {  sortByName(); }, 3000);
 setTimeout(() => {  removeDuplicate(); }, 3500);
 setTimeout(() => {  setPC(pcHS); }, 4500);
-console.log(GameCount);
 
 
 
