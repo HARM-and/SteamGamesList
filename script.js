@@ -60,7 +60,7 @@ function getGameImg(game) {
 
 function gamesToTable(gamesList,pc) {
 	for (i = 0; i < gamesList.length; i++) {
-		GameCount++1
+		GameCount++
 		var game = gamesList[i]
 		var gameImg = getGameImg(game)
   
