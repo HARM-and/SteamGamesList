@@ -108,7 +108,7 @@ request.onload = function() {
 }
 });
 setTimeout(() => {  sortByName(); }, 3000);
-setTimeout(() => {  removeDuplicate(); }, 3500);
+//setTimeout(() => {  removeDuplicate(); }, 3500);
 setTimeout(() => {  setPC(pcHS); }, 4500);
 
 
